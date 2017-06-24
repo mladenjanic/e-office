@@ -23,6 +23,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.3'
+gem 'materialize-sass', '~> 0.98.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
