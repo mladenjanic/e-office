@@ -1,6 +1,9 @@
-=link_to 'Login', user_session_path
-=link_to 'Logout', destroy_user_session_path, method: :delete
-
+- if user_signed_in?
+ =link_to 'Logout', destroy_user_session_path, method: :delete
+-else
+ =link_to 'Login', user_session_path
+ =link_to 'Signup', new_user_registration_path
+ 
 -@docs.each do |doc|
  %h1= link_to doc.title, doc
  %p= truncate(doc.content, length:60)

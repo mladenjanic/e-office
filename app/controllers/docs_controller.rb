@@ -3,7 +3,7 @@ class DocsController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
     
     def index
-        @docs = Doc.all.order('created_at DESC')
+        @docs = Doc.where(user_id: current_user)
     end
     
     def new
