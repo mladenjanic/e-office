@@ -1,0 +1,39 @@
+!!!
+%html
+ %head
+  %title EOffice
+  = csrf_meta_tags
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+ %body
+  
+  
+  
+  %nav
+   .nav-wrapper
+    = link_to 'e-OFFICE', root_path, class: 'brand-logo'
+    <a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons">menu</i></a>
+    %ul.right.hide-on-med-and-down
+     - if user_signed_in?
+      %li=link_to 'Create Doc', new_doc_path
+      %li=link_to 'Logout', destroy_user_session_path, method: :delete
+     - else
+      %li=link_to 'Login', user_session_path
+      %li=link_to 'Signup', new_user_registration_path
+    %ul.side-nav#mobile-demo
+     - if user_signed_in?
+      %li=link_to 'Create Doc', new_doc_path
+      %li=link_to 'Logout', destroy_user_session_path, method: :delete
+     - else
+      %li=link_to 'Login', user_session_path
+      %li=link_to 'Signup', new_user_registration_path
+  
+  
+  - flash.each do |name, msg|
+   = content_tag :div, msg, class: "teal lighten-4"
+   
+  = yield
+
+
+
+

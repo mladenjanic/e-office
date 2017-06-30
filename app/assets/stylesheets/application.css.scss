@@ -1,0 +1,97 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+
+$primary-color: #ee6e73;
+
+body {
+    margin: 0 !important;
+    padding: 0;
+}
+
+
+#cover {
+    .little_e {
+        color: $primary-color;
+    }
+    .btn {
+        &:hover {
+            background-color: #ef9a9a !important;
+        }
+        background-color: $primary-color !important;
+    }
+     h1 {
+        font-weight: 600;
+        font-size: 6em;
+}
+    .info {
+        position: relative;
+        top: 17em;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    background-image: url("https://images.pexels.com/photos/356043/pexels-photo-356043.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35em;
+    position: relative;
+    bottom: 35px;
+}
+
+nav {
+    .nav-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+}
+
+.main {
+    color: $primary-color;
+    font-weight: bolder;
+}
+
+#action {
+    h2 {
+        color: white;
+        font-weight: 400;
+    }
+    .btn {
+        &:hover {
+            background-color: #ef9a9a !important;
+        }
+        background-color: $primary-color !important;
+        border: 1px solid white;
+    }
+    padding: 8em;
+}
+
+.action {
+    background-color: $primary-color;
+}
+
+footer {
+    .copy {
+        color: white;
+        padding: 3em;
+    }
+    background-color: #212121;
+}
