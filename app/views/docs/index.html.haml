@@ -2,9 +2,9 @@
  -unless @docs.blank?
   -@docs.each do |doc|
    %h1= link_to doc.title, doc, class: 'main'
-   %p
+   %p.horizontal
     %i= time_ago_in_words(doc.created_at) + ' ago'
-   %hr
+   %br
  -else
   %h2.main Create Doc!
   %p.flow-text Start Creating Documents and Organizing your Life!
