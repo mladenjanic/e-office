@@ -15,6 +15,9 @@
 //= require materialize-sprockets
 //= require_tree .
 
+
+
+
 $( document ).ready(function(){
     $(".button-collapse").sideNav();
     $('.carousel.carousel-slider').carousel({
@@ -23,3 +26,4 @@ $( document ).ready(function(){
     });
     
 })
+
