@@ -1,7 +1,8 @@
 .container
  %h1.center.main= @doc.title
- %p= @doc.content
-
- = link_to 'All Docs |', docs_path
- = link_to 'Edit |', edit_doc_path
- = link_to 'Delete', doc_path, method: :delete, data: {confirm: 'Are you sure?'}
+ %p= @doc.content.html_safe
+ %br
+ .center.my_links
+  = link_to 'All Docs', docs_path
+  = link_to 'Edit', edit_doc_path
+  = link_to 'Delete', doc_path, method: :delete, data: {confirm: 'Are you sure?'}

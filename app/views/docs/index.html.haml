@@ -1,8 +1,10 @@
 .container
- -@docs.each do |doc|
-  %h1= link_to doc.title, doc, class: 'main'
-  %p= truncate(doc.content, length:60)
-  %p
-   %i= time_ago_in_words(doc.created_at) + ' ago'
- 
- 
+ -unless @docs.blank?
+  -@docs.each do |doc|
+   %h1= link_to doc.title, doc, class: 'main'
+   %p
+    %i= time_ago_in_words(doc.created_at) + ' ago'
+   %hr
+ -else
+  %h2.main Create Doc!
+  %p.flow-text Start Creating Documents and Organizing your Life!
